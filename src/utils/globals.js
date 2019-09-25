@@ -27,12 +27,12 @@ export default createGlobalStyle`
       --color-light: ${props => props.theme.colors.light};
       --color-dark: ${props => props.theme.colors.dark};
       --color-darker: ${props => props.theme.colors.darker};
-      --regular: 400;
+      --medium: 500;
       --bold: 700;
     }
     body {
       font-family: 'Poppins', sans-serif;
-      font-weight: 400;
+      font-weight: 500;
     }
     input[type=number]::-webkit-inner-spin-button, 
     input[type=number]::-webkit-outer-spin-button { 
