@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// components
+import Hero from '../components/Hero';
+import ProjectList from '../components/ProjectList';
+
 const Wrapper = styled.div`
 	padding: 10px;
 
@@ -8,7 +12,10 @@ const Wrapper = styled.div`
 
 const Home = (props) => {
   return (
-    <div>Im your homepage</div>
+  	<>
+			<Hero />
+			<ProjectList />
+  	</>
   )
 }
 
