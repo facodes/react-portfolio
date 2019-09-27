@@ -8,11 +8,12 @@ import ProjectItem from '../components/ProjectItem';
 
 import API from '../API';
 
-const  Container = styled.div`
-	padding: 1.6em 3.2em;
+const  Container = styled.section`
+	padding: 1.6em 5em;
 	background: var(--color-darker);
 	color: var(--color-white);
-
+	z-index: 2;
+	position: relative;
 
 `
 
