@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Components
-import Heading from './Heading';
-import ProjectItem from './ProjectItem';
+import Heading from '../components/Heading';
+import ProjectItem from '../components/ProjectItem';
 
 
 import API from '../API';

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 // components
-import Heading from './Heading';
+import Heading from '../components/Heading';
 
 
 const Wrapper = styled.section`
@@ -16,8 +16,6 @@ const AboutWrapper = styled.div`
 const StackWrapper = styled.div`
  margin-top: 6rem;
 `
-
-
 const TextContainer = styled.div`
 	margin-top: 2rem;	
 `
@@ -33,6 +31,21 @@ const HightLighter = styled.span`
 	font-weight: var(--bold);
 	text-decoration: underline;
 `
+
+const StackList = styled.ul`
+	column-count: 2;
+	column-gap: 10px;
+	padding: 0 1rem;
+`
+
+const StackItem = styled.span`
+	display: block;
+	font-size: 2rem;
+	font-weight: var(--bold);
+	color: var(--color-blue-lg);
+	text-transform: uppercase;
+`
+
 
 const About = (props) => {
   return (
@@ -56,8 +69,25 @@ const About = (props) => {
 	  	</AboutWrapper>
 	  	<StackWrapper>
 	  		<Heading>
-	  			skills
+	  			stack
 	  		</Heading>
+				<Paragraph style={{marginTop: '1.5rem'}}>
+					These are some of the tecnologies and languages that I have used in my projects
+				</Paragraph>
+				<StackList>
+					<StackItem>html5</StackItem>
+					<StackItem>css3</StackItem>
+					<StackItem>sass</StackItem>
+					<StackItem>react</StackItem>
+					<StackItem>vue</StackItem>
+					<StackItem>vuex</StackItem>
+					<StackItem>javascript</StackItem>
+					<StackItem>mongodb</StackItem>
+					<StackItem>gulp</StackItem>
+					<StackItem>redux</StackItem>
+					<StackItem>firebase</StackItem>
+					<StackItem>postgresql</StackItem>
+				</StackList>
 	  	</StackWrapper>
   	</Wrapper>
   )
