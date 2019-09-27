@@ -6,18 +6,21 @@ import logo from '../assets/logo.png';
 const Wrapper = styled.section`
 	background: var(--color-darker);
 	color: var(--color-white);
-  padding: 6em 3.2em;
+  padding: 6em 1.5em; 
   display:flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  z-index: 2;
+  position: relative;
 `
 
 const TalkText = styled.p`
 	color: var(--color-white);
-	font-size: 2.8rem;
+	font-size: 3rem;
 	font-weight: var(--medium);
 	text-transform: capitalize;
+	line-height: 1.2;
 `
 const HightLighter = styled.span`
 	color: var(--color-light);
@@ -70,7 +73,7 @@ const Footer = (props) => {
   return (
   	<Wrapper>
   		<TalkText>
-  			let's build <HightLighter> something  awesome </HightLighter> together
+  			let's talk and  build  <HightLighter> something   awesome </HightLighter> together!
   		</TalkText>
   		<ContactBox>
   			<Email>

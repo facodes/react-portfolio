@@ -6,7 +6,7 @@ import  ButtonLink from './ButtonLink';
 
 
 const Wrapper = styled.div`
-	margin: 2rem 0;
+	margin: 2.5rem 0;
 	width: 100%;
 `;
 
@@ -18,7 +18,7 @@ const Header = styled.header`
 
 	h1{
 		position: absolute;
-		font-size: 3rem;
+		font-size: 2.4rem;
 		font-weight: var(--bold);
 		text-transform: capitalize;
 		left: -16px;

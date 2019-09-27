@@ -8,7 +8,9 @@ import Heading from '../components/Heading';
 const Wrapper = styled.section`
 	background: var(--color-white);
 	color: var(--color-darker);
-  padding: 6em 3.2em;
+  padding: 6em 1.5em;
+  z-index: 2;
+  position: relative;
 `
 const AboutWrapper = styled.div`
 `
@@ -34,7 +36,6 @@ const HightLighter = styled.span`
 
 const StackList = styled.ul`
 	column-count: 2;
-	column-gap: 10px;
 	padding: 0 1rem;
 `
 
@@ -42,7 +43,7 @@ const StackItem = styled.span`
 	display: block;
 	font-size: 2rem;
 	font-weight: var(--bold);
-	color: var(--color-blue-lg);
+	color: var(--color-dark);
 	text-transform: uppercase;
 `
 

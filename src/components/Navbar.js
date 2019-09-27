@@ -4,6 +4,9 @@ import  logo from '../assets/logo.png';
 import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const StyledNavbar = styled.div`
+	position: absolute;
+	z-index: 1080;
+	width: 100%;
 	background : var(--color-dark);
 	padding: 1.6em 3.2em;
 	display: flex;

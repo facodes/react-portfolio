@@ -5,29 +5,42 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Wrapper =  styled.div`
 	width: 100%; 
-	font-size : 4.8rem;
-	padding: 1.45em .6em; 
+	padding: 1.45em 1.5em; 
+	position: fixed;
+	z-index: 1;
 	color: var(--color-white);
-	background-color: var(--color-dark);
+	background: var(--color-dark)  no-repeat fixed top left;
+	background-size: cover;
+	background-attachment: scroll;
 `
 
 const Container = styled.div`
-	text-align: center;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: center;
+	position: relative;
+	
+`
+
+const TextBanner = styled.div`
+ display: flex;
+ flex-direction: column;
 `
 
 const Name = styled.h1`
 	font-weight: var(--bold);
 	text-transform: capitalize;	
-	font-size: 4.8rem;
+	font-size: 10rem;
+	line-height: 0.8;
 	
 `
 const Ocupation = styled.p`
+	margin-top: 3.5rem;
 	text-transform: uppercase;
 	font-weight: var(--meidium);
 	font-size: 1.8rem;
+
 `
 const HighLight = styled.span`
 	background: linear-gradient(to right, var(--color-green) 0%, var(--color-blue) 100%);
@@ -45,7 +58,10 @@ const ScrollDownAnimation = keyframes`
 `
 
 const ContactList = styled.ul`
-	margin-top: 5rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 10%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -96,39 +112,42 @@ const ScrollDown = styled.div`
 	}
 `
 
+
 const Hero = (props) => {
   return (
   	<Wrapper>
   		<Container>
-				<Name>
-					felix lopez
-				</Name>
-				<Ocupation>
-					<HighLight>front end </HighLight> web developer
-				</Ocupation>
+  			<TextBanner>
+					<Name>
+						felix lopez
+					</Name>
+					<Ocupation>
+						<HighLight>front end </HighLight> web developer
+					</Ocupation>
+  			</TextBanner>
+				<ContactList>
+					<ListItem>
+						<a href="#">
+							<FontAwesomeIcon icon ="envelope"/>
+						</a>
+					</ListItem>
+					<ListItem>
+						<a href="#">
+							<FontAwesomeIcon icon ={['fab', 'github']}/>
+						</a>
+					</ListItem>
+					<ListItem>
+						<a href="#">
+							<FontAwesomeIcon icon ={['fab', 'linkedin']}/>
+						</a>
+					</ListItem>
+					<ListItem>
+						<a href="#">
+							<FontAwesomeIcon icon ={['fab', 'instagram']}/>
+						</a>
+					</ListItem>
+				</ContactList>
   		</Container>
-  		<ContactList>
-  			<ListItem>
-  				<a href="#">
-  					<FontAwesomeIcon icon ="envelope"/>
-  				</a>
-  			</ListItem>
-  			<ListItem>
-  				<a href="#">
-  					<FontAwesomeIcon icon ={['fab', 'github']}/>
-  				</a>
-  			</ListItem>
-  			<ListItem>
-  				<a href="#">
-  					<FontAwesomeIcon icon ={['fab', 'linkedin']}/>
-  				</a>
-  			</ListItem>
-  			<ListItem>
-  				<a href="#">
-  					<FontAwesomeIcon icon ={['fab', 'instagram']}/>
-  				</a>
-  			</ListItem>
-  		</ContactList>
   	</Wrapper>
   )
 }
