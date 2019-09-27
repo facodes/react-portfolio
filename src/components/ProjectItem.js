@@ -8,15 +8,13 @@ import  ButtonLink from './ButtonLink';
 const Wrapper = styled.div`
 	margin: 2rem 0;
 	width: 100%;
-
-
 `;
 
 const Header = styled.header`
 
 	position: relative;
 	width: 100%;
-	height: 45px;
+	height: 50px;
 
 	h1{
 		position: absolute;
