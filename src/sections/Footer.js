@@ -71,7 +71,7 @@ const LogoBox = styled.div`
 
 const Footer = (props) => {
   return (
-  	<Wrapper>
+  	<Wrapper id="contact">
   		<TalkText>
   			let's talk and  build  <HightLighter> something   awesome </HightLighter> together!
   		</TalkText>

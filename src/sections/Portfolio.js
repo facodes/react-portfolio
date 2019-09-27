@@ -8,7 +8,7 @@ import ProjectItem from '../components/ProjectItem';
 
 import API from '../API';
 
-const  Container = styled.section`
+const  Wrapper = styled.section`
 	padding: 1.6em 5em;
 	background: var(--color-darker);
 	color: var(--color-white);
@@ -22,13 +22,13 @@ const ProjectList = (props) => {
 
 
   return (
-  	<Container>
+  	<Wrapper id="portfolio">
 			{
 				API.map(project => (
 					<ProjectItem project={project} key={project.id} ></ProjectItem>
 				))
 			}
-  	</Container>
+  	</Wrapper>
   )
 }
 

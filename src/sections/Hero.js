@@ -69,7 +69,6 @@ const ContactList = styled.ul`
 `
 
 const ListItem = styled.li`
-
 	padding: 0.3em;
 	font-size: 1.8rem;
 	line-height: 1;
@@ -83,9 +82,7 @@ const ListItem = styled.li`
 	&:not(:last-child){
 		margin-right: 1rem;
 	}
-
 `
-
 
 const ScrollDown = styled.div`
 	display: none;

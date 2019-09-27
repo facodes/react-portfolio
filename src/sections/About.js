@@ -50,7 +50,7 @@ const StackItem = styled.span`
 
 const About = (props) => {
   return (
-  	<Wrapper>
+  	<Wrapper id="about">
 	  	<AboutWrapper>
 	  		<Heading>
 	  			about
