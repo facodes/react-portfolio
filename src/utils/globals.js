@@ -20,19 +20,21 @@ export default createGlobalStyle`
     	/* 1rem = 10px */
       font-size: 62.5%; 
       box-sizing: border-box;
-      --color-dark: ${props => props.theme.colors.white};
+      --color-white: ${props => props.theme.colors.white};
       --color-blue: ${props => props.theme.colors.blue};
       --color-green: ${props => props.theme.colors.green};
       --color-red: ${props => props.theme.colors.red};
       --color-light: ${props => props.theme.colors.light};
       --color-dark: ${props => props.theme.colors.dark};
       --color-darker: ${props => props.theme.colors.darker};
+      --regular: 400;
       --medium: 500;
       --bold: 700;
     }
     body {
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
+      background: var(--color-dark);
     }
     input[type=number]::-webkit-inner-spin-button, 
     input[type=number]::-webkit-outer-spin-button { 
