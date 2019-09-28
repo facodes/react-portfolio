@@ -10,6 +10,12 @@ const StyledHeading = styled.h1`
 	position: relative;
 	line-height: 1.2;
 
+	${props => props.outline ? `
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: ${props.color};
+   ` : '' }
+
 	&::after{
 		content: '';
 		position: absolute;
@@ -19,8 +25,6 @@ const StyledHeading = styled.h1`
 		height: 4px; 
 		background: currentColor;
 	}
-	
-
 `
 
 const Heading = (props) => {
