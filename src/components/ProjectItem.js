@@ -6,12 +6,16 @@ import  ButtonLink from './ButtonLink';
 
 
 const Wrapper = styled.div`
-	margin: 2.5rem 0;
 	width: 100%;
+
+	&:not(:last-child){
+		margin-bottom: 8rem;
+	}
+
 `;
 
 const Header = styled.header`
-
+	
 	position: relative;
 	width: 100%;
 	height: 50px;
@@ -21,17 +25,25 @@ const Header = styled.header`
 		font-size: 2.4rem;
 		font-weight: var(--bold);
 		text-transform: capitalize;
-		left: -16px;
+		left: 16px;
 	}
 `;
 
-const Image = styled.div`
-	width: 100%;
-	height: 300px;
-	background-image: ${props => `url("${props.url}")`};
-	background-position: center;
-	background-size: cover;
+const DescriptionText = styled.p`
+	font-size: 1.6rem;
+	padding: 0.8em  0;
+	font-weight: var(--regular);
+`
+const ImageContainer = styled.div`
 	
+
+`
+
+const Image = styled.img`
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: center center;
 `;
 
 const Footer = styled.div`
@@ -39,7 +51,7 @@ const Footer = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	padding: 2em;
+	padding: 0 2em;
 	
 
 	&::before{
@@ -56,23 +68,29 @@ const Footer = styled.div`
 `;
 
 
-const ProjectItem = (props) => {
+const ProjectItem = ({project}) => {
   return (
     <Wrapper>
   		<Header>
   			<h1>
-  				{props.project.name}
+  				{project.title}
   			</h1>
   		</Header>
-			<Image url={props.project.url}>
-				
-			</Image>
+			<ImageContainer>
+				<picture>
+					<source media="(min-width: 900px)" srcset={project.desktop}/>
+					<Image src={project.mobile} alt="a project picture"/>
+				</picture>
+			</ImageContainer> 
+			<DescriptionText>
+				{project.description}
+			</DescriptionText>
 			<Footer>
-				<ButtonLink href="https://www.instagram.com" left>
-					website
+				<ButtonLink href={project.website}>
+					demo
 				</ButtonLink>
-				<ButtonLink>
-					Source
+				<ButtonLink  href={project.source}>
+					code
 				</ButtonLink>
 			</Footer>
     </Wrapper>
