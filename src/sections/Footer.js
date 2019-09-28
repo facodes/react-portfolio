@@ -17,7 +17,7 @@ const Wrapper = styled.section`
 
 const TalkText = styled.p`
 	color: var(--color-white);
-	font-size: 3rem;
+	font-size: 2.6rem;
 	font-weight: var(--medium);
 	text-transform: capitalize;
 	line-height: 1.2;
