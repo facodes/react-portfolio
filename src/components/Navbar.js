@@ -166,7 +166,7 @@ const Navbar = (props) => {
 		  				to="#"
   				   	spy={true}
   				   	smooth={true}
-  				   	duration= {500}
+  				   	duration= {1000}
 		  			> 
 		  				Home 
 		  		  </Link>
@@ -176,7 +176,7 @@ const Navbar = (props) => {
 		  				onClick={()=> toggleNav()}
 		  				to="portfolio"
   				   	spy={true}
-  				   	offset={-50}
+  				   	offset={-70}
   				   	smooth={true}
   				   	duration= {1000}
 		  			> 
@@ -188,7 +188,7 @@ const Navbar = (props) => {
 		  				onClick={()=> toggleNav()}
 		  				to="about"
   				   	spy={true}
-  				   	offset={-50}
+  				   	offset={-70}
   				   	smooth={true}
   				   	duration= {1000}
 		  			> 
