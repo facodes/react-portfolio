@@ -27,26 +27,26 @@ const StyledButton = styled.a.attrs({ target: '_blank' })`
 	/* Left */
 	&::before{
 		left: 0px; top: 0px; bottom: 0px; width: 1px;
-		transform: translateY(-100%);
+		transform: translateY(-101%);
 	}
 
 	/* Bottom */
 	&::after{
 		bottom: 0px; left: 0px; right: 0px; height: 1px;
-		transform: translateX(-100%);
+		transform: translateX(-101%);
 	}
 
 	span{
 	 	/* Right */
 		&::before{
 			top: 0px; bottom: 0px; right: 0px; width: 1px;
-			transform: translateY(100%);
+			transform: translateY(101%);
 		}
 
 		/* Top */
 		&::after{
 			top: 0px; left: 0px;  right:0px; height: 1px;
-			transform: translateX(100%);
+			transform: translateX(101%);
 		}
 	}
 
