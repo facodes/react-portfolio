@@ -10,11 +10,10 @@ const StyledButton = styled.a.attrs({ target: '_blank' })`
 	font-weight: var(--medium);
 	padding: 0.5em 1em;	
 	text-transform: uppercase;
-	/*border: 1px solid white;*/
 	background: var(--color-darker);
 	z-index: 2;
 	text-decoration: none;
-	color: var(--color-white);
+	color: ${props => props.color ? `var(--color-${props.color})` : `var(--color-white)`};
 	outline: none;
 
 	&::before, &::after, span::before, span::after{
@@ -61,7 +60,7 @@ const StyledButton = styled.a.attrs({ target: '_blank' })`
 
 const ButtonLink = (props) => {
   return (
-    <StyledButton {...props}>
+    <StyledButton {...props} color={props.color}>
     	<span>
     		{props.children}	
     	</span>

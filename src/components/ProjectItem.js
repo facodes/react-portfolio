@@ -4,14 +4,12 @@ import styled from 'styled-components';
 // Components
 import  ButtonLink from './ButtonLink';
 
-
 const Wrapper = styled.div`
 	width: 100%;
 
 	&:not(:last-child){
 		margin-bottom: 8rem;
 	}
-
 `;
 
 const Header = styled.header`
@@ -47,7 +45,6 @@ const Footer = styled.div`
 	padding:0 4em;
 	margin-top: 1rem;
 	
-
 	&::before{
 		content: '';
 		position: absolute;
@@ -60,7 +57,6 @@ const Footer = styled.div`
 		z-index: 1;
 	}
 `;
-
 
 const ProjectItem = ({project}) => {
   return (
@@ -78,7 +74,7 @@ const ProjectItem = ({project}) => {
 				{project.description}
 			</DescriptionText>
 			<Footer>
-				<ButtonLink href={project.website}>
+				<ButtonLink href={project.website} color="blue-lg">
 					demo
 				</ButtonLink>
 				<ButtonLink  href={project.source}>
