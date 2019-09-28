@@ -23,8 +23,6 @@ const LogoContainer = styled.div`
 		width: 100%;
 	}
 `
-
-
 const MenuButton = styled.div`
 	position: relative;
 	width: 25px;
@@ -86,8 +84,6 @@ const NavList = styled.ul`
 	opacity: ${props => props.isNavOpen ? 1 : 0};
 	transition:  ${props => props.isNavOpen ? 'opacity 0.3s 0.35s ease' : ''}; 
 `
-
-
 const NavLink = styled.li`
 	&:not(:last-child){
 		margin-bottom: 2rem;
@@ -99,9 +95,7 @@ const NavLink = styled.li`
 		text-decoration: none;
 		color: var(--color-white);
 	}
-
 `
-
 const ContactList = styled.ul`
 	position: absolute;
 	left: 0;
@@ -116,7 +110,6 @@ const ContactList = styled.ul`
 `
 
 const ListItem = styled.li`
-
 	padding: 0.3em;
 	font-size: 1.8rem;
 	line-height: 1;
@@ -130,10 +123,7 @@ const ListItem = styled.li`
 	&:not(:last-child){
 		margin-right: 1rem;
 	}
-
 `
-
-
 
 const Navbar = (props) => {
 	const [isNavOpen, setIsNavOpen] = useState(false); 
@@ -145,7 +135,6 @@ const Navbar = (props) => {
 		 document.body.style.overflow = 'visible';
 		setIsNavOpen(!isNavOpen) 
 	}
-
 
   return (
   	<StyledNavbar>
