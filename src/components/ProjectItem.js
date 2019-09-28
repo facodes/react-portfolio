@@ -15,11 +15,9 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.header`
-	
 	position: relative;
 	width: 100%;
 	height: 50px;
-
 	h1{
 		position: absolute;
 		font-size: 2.4rem;
@@ -31,14 +29,9 @@ const Header = styled.header`
 
 const DescriptionText = styled.p`
 	font-size: 1.6rem;
-	padding: 0.8em  0;
+	padding: 0.8em  1em;
 	font-weight: var(--regular);
 `
-const ImageContainer = styled.div`
-	
-
-`
-
 const Image = styled.img`
 	width: 100%;
 	height: 200px;
@@ -51,14 +44,15 @@ const Footer = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	padding: 0 2em;
+	padding:0 4em;
+	margin-top: 1rem;
 	
 
 	&::before{
 		content: '';
 		position: absolute;
-		left: 10%;
-		right: 10%;
+		left: 20%;
+		right: 20%;
 		top: 50%;
 		transform: translateY(-50%);
 		height: 1px;
@@ -76,12 +70,10 @@ const ProjectItem = ({project}) => {
   				{project.title}
   			</h1>
   		</Header>
-			<ImageContainer>
-				<picture>
-					<source media="(min-width: 900px)" srcset={project.desktop}/>
-					<Image src={project.mobile} alt="a project picture"/>
-				</picture>
-			</ImageContainer> 
+			<picture>
+				<source media="(min-width: 900px)" srcSet={project.desktop}/>
+				<Image src={project.mobile} alt="a project picture"/>
+			</picture>
 			<DescriptionText>
 				{project.description}
 			</DescriptionText>

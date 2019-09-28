@@ -11,11 +11,15 @@ import API from '../API';
 
 
 const  Wrapper = styled.section`
-	padding: 6em 1.5em;
+  padding: 6em 0;
 	background: var(--color-darker);
 	color: var(--color-white);
 	z-index: 2;
 	position: relative;
+`
+
+const HeadingWrapper = styled.div`
+	padding: 0 1.5em;
 `
 
 const ProjectsWrapper = styled.div`
@@ -29,10 +33,11 @@ const ProjectList = (props) => {
 
   return (
   	<Wrapper id="portfolio">
-			<Heading outline color="light">
-				Portfolio
-			</Heading>
-	
+  		<HeadingWrapper>
+				<Heading outline color="light">
+					Portfolio
+				</Heading>
+  		</HeadingWrapper>
 		 <ProjectsWrapper>
 			{
 				projects.map(project => (
