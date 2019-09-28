@@ -106,7 +106,7 @@ const ContactList = styled.ul`
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 10%;
+	bottom: 8%;
 	transform: ${props => props.isNavOpen ? 'translateX(0)' : 'translateX(-100%)'};
 	transition: ${props => props.isNavOpen ? 'transform 0.3s 0.35s ease' : ''};
 	display: flex;
