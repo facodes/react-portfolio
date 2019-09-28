@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Store from './Store';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -12,8 +13,10 @@ import GlobalStyles from './utils/globals';
 ReactDOM.render( 
 	<ThemeProvider theme={theme}>
 		<Router>
-			<App />
-			<GlobalStyles />
+			<Store>
+				<App />
+				<GlobalStyles />
+			</Store>
 		</Router>
 	</ThemeProvider>
 
