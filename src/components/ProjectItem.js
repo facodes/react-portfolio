@@ -32,7 +32,7 @@ const DescriptionText = styled.p`
 `
 const Image = styled.img`
 	width: 100%;
-	height: 200px;
+	min-height: 200px;
 	object-fit: cover;
 	object-position: center center;
 `;
@@ -40,6 +40,8 @@ const Image = styled.img`
 const Footer = styled.div`
 	position: relative;
 	width: 100%;
+	max-width: 280px;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	padding:0 4em;
@@ -74,6 +76,7 @@ const ProjectItem = ({project}) => {
 				{project.description}
 			</DescriptionText>
 			<Footer>
+
 				<ButtonLink href={project.website} color="blue-lg">
 					demo
 				</ButtonLink>
