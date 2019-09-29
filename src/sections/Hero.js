@@ -20,6 +20,7 @@ const Wrapper =  styled.div`
 
 const Container = styled.div`
 	height: 100vh;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -31,7 +32,7 @@ const TextBanner = styled.div`
  flex-direction: column;
 
  @media ${props => props.theme.mediaQueries.small}{
-   max-width: 300px;
+   max-width: 350px;
  }
 `
 
@@ -40,12 +41,22 @@ const Name = styled.h1`
 	text-transform: capitalize;	
 	font-size: 10rem;
 	line-height: 0.8;
+
+	@media ${props => props.theme.mediaQueries.small}{
+	  font-size: 12rem;
+	  line-height: 0.9;
+	}
+
 `
 const Ocupation = styled.p`
 	margin-top: 3.5rem;
 	text-transform: uppercase;
 	font-weight: var(--meidium);
-	font-size: 1.8rem;
+	font-size: 2rem;
+
+	@media ${props => props.theme.mediaQueries.small}{
+	  font-size: 2.6rem;
+	}
 
 `
 const HighLight = styled.span`
@@ -72,6 +83,17 @@ const ContactList = styled.ul`
 	align-items: center;
 	justify-content: center;
 	list-style: none;
+
+	@media ${props => props.theme.mediaQueries.small}{
+	  height: 20rem;
+	  bottom:auto;
+	  left: auto;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  flex-direction: column;
+	  justify-content: space-around;
+	}
+
 `
 
 const ListItem = styled.li`
@@ -83,10 +105,18 @@ const ListItem = styled.li`
 		color: var(--color-white);
 		font-size: 2.4rem;
 		text-decoration: none;
+
+	  @media ${props => props.theme.mediaQueries.small}{
+	    font-size: 2.8rem;
+	  }
 	}
 
 	&:not(:last-child){
 		margin-right: 1rem;
+	
+		@media ${props => props.theme.mediaQueries.small}{
+		  margin: 0;
+		}
 	}
 `
 
