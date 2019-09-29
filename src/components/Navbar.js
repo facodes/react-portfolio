@@ -9,7 +9,7 @@ const StyledNavbar = styled.div`
 	z-index: 3;
 	width: 100%;
 	background : var(--color-dark);
-	padding: 1.6em 3em;
+	padding: 0.8em 3em;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -211,7 +211,7 @@ const Navbar = (props) => {
 		  				onClick={()=> toggleNav()}
 		  				to="portfolio"
   				   	spy={true}
-  				   	offset={-79}
+  				   	offset={-62}
   				   	smooth={true}
   				   	duration= {1000}
 		  			> 
@@ -223,7 +223,7 @@ const Navbar = (props) => {
 		  				onClick={()=> toggleNav()}
 		  				to="about"
   				   	spy={true}
-  				   	offset={-79}
+  				   	offset={-62}
   				   	smooth={true}
   				   	duration= {1000}
 		  			> 
@@ -235,7 +235,7 @@ const Navbar = (props) => {
 		  				onClick={()=> toggleNav()}
 		  				to="contact"
   				   	spy={true}
-  				   	offset={-79}
+  				   	offset={-62}
   				   	smooth={true}
   				   	duration= {1000}
 		  			> 
