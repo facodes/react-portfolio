@@ -63,10 +63,15 @@ const Footer = styled.div`
 		right: 20%;
 		top: 50%;
 		transform: translateY(-50%);
-		height: 1px;
+		height: 1.8px;
 		background: var(--color-white);
 		z-index: 1;
 	}
+	
+	@media ${props => props.theme.mediaQueries.small}{
+	  max-width: 350px;
+	}
+
 `;
 
 const ProjectItem = ({project}) => {
