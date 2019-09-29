@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledButton = styled.a.attrs({ target: '_blank' })`
-
 	overflow: hidden;
 	text-align: center;
 	position: relative;
@@ -26,26 +25,26 @@ const StyledButton = styled.a.attrs({ target: '_blank' })`
 	/* Left */
 	&::before{
 		left: 0px; top: 0px; bottom: 0px; width: 1px;
-		transform: translateY(-101%);
+		transform: translateY(-105%);
 	}
 
 	/* Bottom */
 	&::after{
 		bottom: 0px; left: 0px; right: 0px; height: 1px;
-		transform: translateX(-101%);
+		transform: translateX(-105%);
 	}
 
 	span{
 	 	/* Right */
 		&::before{
 			top: 0px; bottom: 0px; right: 0px; width: 1px;
-			transform: translateY(101%);
+			transform: translateY(105%);
 		}
 
 		/* Top */
 		&::after{
 			top: 0px; left: 0px;  right:0px; height: 1px;
-			transform: translateX(101%);
+			transform: translateX(105%);
 		}
 	}
 
@@ -53,11 +52,8 @@ const StyledButton = styled.a.attrs({ target: '_blank' })`
 		 &::before , &::after, span::before, span::after{
 				transform: translate(0, 0);
 		 }
-
 	}
-
 `
-
 const ButtonLink = (props) => {
   return (
     <StyledButton {...props} color={props.color}>
