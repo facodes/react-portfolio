@@ -40,7 +40,7 @@ const TalkText = styled.p`
 	}
 
 	@media ${props => props.theme.mediaQueries.smaller}{
-	  font-size: 4rem;
+	  font-size: 3.5rem;
 	}
 
 `
@@ -59,7 +59,7 @@ const Email = styled.a`
 	color: var(--color-light); 
 	
 	@media ${props => props.theme.mediaQueries.smaller}{
-	  font-size: 3.5rem;
+	 	font-size: 2.9rem;
 	}
 
 `
@@ -83,7 +83,7 @@ const ListItem = styled.li`
 		text-decoration: none;
 	
 		@media ${props => props.theme.mediaQueries.smaller}{
-		  font-size: 6rem;
+		  font-size: 4.5rem;
 		}
 
 	}

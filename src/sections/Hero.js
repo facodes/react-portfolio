@@ -12,6 +12,10 @@ const Wrapper =  styled.div`
 	background: var(--color-dark)  no-repeat fixed top left;
 	background-size: cover;
 	background-attachment: scroll;
+
+	@media ${props => props.theme.mediaQueries.small}{
+	  padding: 1.45em 3em;
+	}
 `
 
 const Container = styled.div`
@@ -20,12 +24,15 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
-	
 `
 
 const TextBanner = styled.div`
  display: flex;
  flex-direction: column;
+
+ @media ${props => props.theme.mediaQueries.small}{
+   max-width: 300px;
+ }
 `
 
 const Name = styled.h1`
@@ -33,7 +40,6 @@ const Name = styled.h1`
 	text-transform: capitalize;	
 	font-size: 10rem;
 	line-height: 0.8;
-	
 `
 const Ocupation = styled.p`
 	margin-top: 3.5rem;

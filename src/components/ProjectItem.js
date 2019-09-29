@@ -22,6 +22,11 @@ const Header = styled.header`
 		font-weight: var(--bold);
 		text-transform: capitalize;
 		left: 16px;
+
+	  @media ${props => props.theme.mediaQueries.small}{
+	    font-size: 2.8rem;
+	    left: 20px;
+	  }
 	}
 `;
 
@@ -29,6 +34,10 @@ const DescriptionText = styled.p`
 	font-size: 1.6rem;
 	padding: 0.8em  1em;
 	font-weight: var(--regular);
+
+	@media ${props => props.theme.mediaQueries.small}{
+	  font-size: 2rem;
+	}
 `
 const Image = styled.img`
 	width: 100%;

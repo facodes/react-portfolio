@@ -11,6 +11,15 @@ const Wrapper = styled.section`
   padding: 6em 1.5em;
   z-index: 2;
   position: relative;
+
+	@media ${props => props.theme.mediaQueries.smaller}{
+	  padding: 6em 2.5em;
+	}
+
+	@media ${props => props.theme.mediaQueries.small}{
+	  padding: 6em 3em;
+	}
+
 `
 const AboutWrapper = styled.div`
 `
@@ -19,6 +28,11 @@ const StackWrapper = styled.div`
 `
 const TextContainer = styled.div`
 	margin-top: 2rem;	
+
+	@media ${props => props.theme.mediaQueries.small}{
+	  margin-left: 4rem;
+	  margin-right: 4rem;
+	}
 `
 const Paragraph = styled.p`
 	font-size: 1.7rem;
@@ -26,6 +40,24 @@ const Paragraph = styled.p`
 	line-height: 1.4;
 	&:not(:last-child){
 		margin-bottom: 2rem; 
+	
+		@media ${props => props.theme.mediaQueries.small}{
+		  margin-bottom: 2.2rem;
+		  line-height: 1.5; 
+		}
+
+	}
+
+	@media ${props => props.theme.mediaQueries.small}{
+	 font-size: 2.1rem;
+	}
+
+`
+const StackTextContainer = styled.div`
+	margin-top: 1.5rem;
+	@media ${props => props.theme.mediaQueries.small}{
+	  margin-left: 4rem;
+	  margin-right: 4rem;
 	}
 `
 const HightLighter = styled.span`
@@ -58,9 +90,11 @@ const About = (props) => {
 	  		<Heading>
 	  			stack
 	  		</Heading>
-				<Paragraph style={{marginTop: '1.5rem'}}>
-					These are some of the tecnologies and languages that I have used in my projects
-				</Paragraph>
+	  		<StackTextContainer>
+					<Paragraph >
+						These are some of the tecnologies and languages that I have used in my projects
+					</Paragraph>
+	  		</StackTextContainer>
 				<StackList />
 	  	</StackWrapper>
   	</Wrapper>

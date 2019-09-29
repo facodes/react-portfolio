@@ -20,6 +20,10 @@ const  Wrapper = styled.section`
  @media ${props => props.theme.mediaQueries.smallest}{
    padding: 6em 1.5em;
  }
+
+	@media ${props => props.theme.mediaQueries.small}{
+	  padding: 6em 3em;
+	}
 `
 
 const HeadingWrapper = styled.div`

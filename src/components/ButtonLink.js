@@ -15,6 +15,10 @@ const StyledButton = styled.a.attrs({ target: '_blank' })`
 	color: ${props => props.color ? `var(--color-${props.color})` : `var(--color-white)`};
 	outline: none;
 
+	@media ${props => props.theme.mediaQueries.small}{
+	  font-size: 1.8rem;
+	}
+
 	&::before, &::after, span::before, span::after{
 		content:'';
 		position: absolute;

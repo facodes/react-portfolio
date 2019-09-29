@@ -16,6 +16,11 @@ const StyledHeading = styled.h1`
     -webkit-text-stroke-color: ${props.color};
    ` : '' }
 
+	@media ${props => props.theme.mediaQueries.small}{
+	  font-size: 4.5rem;
+	}
+
+
 	&::after{
 		content: '';
 		position: absolute;

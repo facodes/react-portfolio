@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import icons from '../assets/stack-icons';
 
 const StackListWrapper = styled.ul`
+	max-width: 500px;
+	margin:0 auto;
 	margin-top: 2rem;
 	display: flex;
 	flex-flow: column wrap;
