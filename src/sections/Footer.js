@@ -21,6 +21,11 @@ const TalkText = styled.p`
 	font-weight: var(--medium);
 	text-transform: capitalize;
 	line-height: 1.2;
+
+	@media ${props => props.theme.mediaQueries.smallest}{
+	  font-size: 3rem;
+	}
+
 `
 const HightLighter = styled.span`
 	color: var(--color-light);

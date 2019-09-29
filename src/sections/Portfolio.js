@@ -16,10 +16,18 @@ const  Wrapper = styled.section`
 	color: var(--color-white);
 	z-index: 2;
 	position: relative;
+
+ @media ${props => props.theme.mediaQueries.smallest}{
+   padding: 6em 1.5em;
+ }
 `
 
 const HeadingWrapper = styled.div`
 	padding: 0 1.5em;
+	
+	@media ${props => props.theme.mediaQueries.smallest}{
+	  padding: 0;
+	}
 `
 
 const ProjectsWrapper = styled.div`
@@ -28,9 +36,7 @@ const ProjectsWrapper = styled.div`
 
 const ProjectList = (props) => {
 	const [projects] = useContext(ProjectsContext); 
-
-	console.log (projects);
-
+	
   return (
   	<Wrapper id="portfolio">
   		<HeadingWrapper>
