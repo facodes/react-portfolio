@@ -7,12 +7,25 @@ const Wrapper = styled.section`
 	background: var(--color-darker);
 	color: var(--color-white);
   padding: 6em 1.5em; 
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   z-index: 2;
   position: relative;
+
+	@media ${props => props.theme.mediaQueries.smaller}{
+	  padding: 6em 0;
+	}
+`
+
+const Container = styled.div`
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	@media ${props => props.theme.mediaQueries.smaller}{
+	  max-width: 450px;
+	  margin: 0 auto;
+	}
+
 `
 
 const TalkText = styled.p`
@@ -24,6 +37,10 @@ const TalkText = styled.p`
 
 	@media ${props => props.theme.mediaQueries.smallest}{
 	  font-size: 3rem;
+	}
+
+	@media ${props => props.theme.mediaQueries.smaller}{
+	  font-size: 4rem;
 	}
 
 `
@@ -40,6 +57,11 @@ const Email = styled.a`
 	font-size: 2.4rem;
 	font-weight: var(--medium);
 	color: var(--color-light); 
+	
+	@media ${props => props.theme.mediaQueries.smaller}{
+	  font-size: 3.5rem;
+	}
+
 `
 
 const ContactList = styled.ul`
@@ -59,6 +81,11 @@ const ListItem = styled.li`
 		color: var(--color-white);
 		font-size: 4rem;
 		text-decoration: none;
+	
+		@media ${props => props.theme.mediaQueries.smaller}{
+		  font-size: 6rem;
+		}
+
 	}
 
 	&:not(:last-child){
@@ -77,34 +104,36 @@ const LogoBox = styled.div`
 const Footer = (props) => {
   return (
   	<Wrapper id="contact">
-  		<TalkText>
-  			let's talk and  build  <HightLighter> something   awesome </HightLighter> together!
-  		</TalkText>
-  		<ContactBox>
-  			<Email>
-  				hello@felixlopez.xyz
-  			</Email>
-  			<ContactList>
-  				<ListItem>
-  					<a href="#">
-  						<FontAwesomeIcon icon ={['fab', 'github']}/>
-  					</a>
-  				</ListItem>
-  				<ListItem>
-  					<a href="#">
-  						<FontAwesomeIcon icon ={['fab', 'linkedin']}/>
-  					</a>
-  				</ListItem>
-  				<ListItem>
-  					<a href="#">
-  						<FontAwesomeIcon icon ={['fab', 'instagram']}/>
-  					</a>
-  				</ListItem>
-  			</ContactList>
-  		</ContactBox>
-  		<LogoBox>
-  			<img src={logo} alt="felix lopez logo"/>
-  		</LogoBox>
+  		<Container>  			
+	  		<TalkText>
+	  			let's talk and  build  <HightLighter> something   awesome </HightLighter> together!
+	  		</TalkText>
+	  		<ContactBox>
+	  			<Email>
+	  				hello@felixlopez.xyz
+	  			</Email>
+	  			<ContactList>
+	  				<ListItem>
+	  					<a href="#">
+	  						<FontAwesomeIcon icon ={['fab', 'github']}/>
+	  					</a>
+	  				</ListItem>
+	  				<ListItem>
+	  					<a href="#">
+	  						<FontAwesomeIcon icon ={['fab', 'linkedin']}/>
+	  					</a>
+	  				</ListItem>
+	  				<ListItem>
+	  					<a href="#">
+	  						<FontAwesomeIcon icon ={['fab', 'instagram']}/>
+	  					</a>
+	  				</ListItem>
+	  			</ContactList>
+	  		</ContactBox>
+	  		<LogoBox>
+	  			<img src={logo} alt="felix lopez logo"/>
+	  		</LogoBox>
+  		</Container>
   	</Wrapper>
   )
 }
