@@ -10,6 +10,7 @@ const Wrapper = styled.div`
 	&:not(:last-child){
 		margin-bottom: 8rem;
 	}
+
 `;
 
 const Header = styled.header`

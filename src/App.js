@@ -1,52 +1,66 @@
-import React , { useState, useEffect }from 'react';
-import { Route, Link } from 'react-router-dom';
+import React , { useState, useEffect , useContext }from 'react';
+import { Route } from 'react-router-dom';
+import { ProjectsContext } from './Store';
 
 import contentful from "./api/contentful";
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
-  faBars
+  faBars,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { fab, faGithub} from '@fortawesome/free-brands-svg-icons';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 // Pages 
 import Home from './pages/Home';
-import Project from './pages/Project';
+
+// Components
+import Navbar from './components/Navbar';
 
 library.add(
   fab,
   faBars,
-  faGithub,
+  faEnvelope,
  );
 
 function App() {
 
-	const [projects, setProjects] = useState([]);
-
-	console.log (contentful);
+	const [projects, setProjects] = useContext(ProjectsContext);
+  const [isInit, setIsInit] = useState(true);
 
 	useEffect(() => {
     async function getProjects() {
       const { items } = await contentful.getEntries({
         content_type: "project"
       });
-    }
 
+      const fetchedProjects = items.map(item => {
+        const images = item.fields.images.map(image => {
+          return image.fields.file.url;
+        });
+        const id = item.sys.id;
+        return { id, ...item.fields, desktop: images[0], mobile: images[1] };
+      });
+
+      setProjects(fetchedProjects);
+      setIsInit(true);
+    }
+    
     getProjects();
-  }, [projects]);
+  }, []);
 
   return (
-    <div >
-			<Link to="/">Home</Link>
-			<Link to="/project">Poject</Link>
-
-    	<Route exact path="/" component={Home}/>
-    	<Route path="/project" component={Project}/>
-    </div>
+    < >
+      {
+        isInit ? (
+         <main>
+            <Navbar />
+            <Route exact path="/" component={Home}/>
+         </main>
+        ) : ( <h1>Loading</h1> )
+      }
+    </>
   );
 }
 

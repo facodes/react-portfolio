@@ -36,6 +36,11 @@ const HeadingWrapper = styled.div`
 
 const ProjectsWrapper = styled.div`
 	margin-top: 6rem;
+	
+	@media ${props => props.theme.mediaQueries.medium}{
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+	}
 `
 
 const ProjectList = (props) => {
